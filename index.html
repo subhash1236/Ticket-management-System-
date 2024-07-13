@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ticket Management System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Ticket Management System</h1>
+    <form id="ticket-form">
+      <input type="hidden" id="ticket-id">
+      <label for="title">Title:</label>
+      <input type="text" id="title" required>
+      <label for="description">Description:</label>
+      <textarea id="description" required></textarea>
+      <label for="status">Status:</label>
+      <select id="status" required>
+        <option value="Open">Open</option>
+        <option value="In Progress">In Progress</option>
+        <option value="Closed">Closed</option>
+      </select>
+      <label for="dueDate">Due Date:</label>
+      <input type="datetime-local" id="dueDate" required>
+      <button type="submit">Add/Update Ticket</button>
+    </form>
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Status</th>
+          <th>Due Date</th>
+          <th>Priority</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="ticket-table-body">
+      </tbody>
+    </table>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
